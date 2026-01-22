@@ -1,0 +1,41 @@
+# Insurance Referee Assignment Solver (ASP)
+
+## Course
+CSE 579 – Knowledge Representation & Reasoning  
+Arizona State University
+
+## Project Overview
+This project models and solves an insurance referee assignment problem
+using Answer Set Programming (ASP). The goal is to optimally assign
+referees to insurance cases while satisfying workload, compatibility,
+regional, and risk constraints.
+
+## Problem Objectives
+- Assign exactly one referee per case
+- Respect referee workload limits
+- Enforce type and region compatibility
+- Limit damage exposure for external referees
+- Optimize assignments using weighted preferences
+
+## Constraints Implemented
+- Workload capacity constraint
+- Case type compatibility
+- Regional eligibility
+- External referee damage restriction
+
+## Optimization Strategy
+Weak constraints with priority levels:
+- **@3**: Penalize external referees when internal referees are available
+- **@2**: Maximize regional preference scores
+- **@1**: Maximize case-type preference scores
+
+## Technologies
+- Answer Set Programming (ASP)
+- Clingo solver
+
+## Files
+- `insurance_referee_solver.lp` – Final ASP model
+
+## Author
+Rakshit Govind Thota  
+MS Data Analytics & Engineering, ASU
